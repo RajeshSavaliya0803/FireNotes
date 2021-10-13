@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">फायरनोट्स</string>
+    <string name="hint_password">अपना पासवर्ड दर्ज करें</string>
+    <string name="hint_email">अपना ईमेल दर्ज करें</string>
+    <string name="hint_confirm_password">पासवर्ड की पुष्टि करें</string>
+    <string name="add_note">"नोट बनाएं "</string>
+    <string name="log_out">लॉग आउट</string>
+    <string name="hint_content">नोट का विषय</string>
+    <string name="hint_title">नोट का शीर्षक</string>
+    <string name="save_note">सेव नोट</string>
+    <string name="no_notes_found">कोई नोट नहीं मिला</string>
+    <string name="add_image">छवि जोड़े</string>
+    <string name="delete_diag_title">हटाएं?</string>
+    <string name="delete_diag_msg">क्या आप नोट हटाना चाहते हैं?</string>
+    <string name="ok">ठीक है</string>
+    <string name="cancel">रद्द करें</string>
+    <string name="btn_login">लॉग इन</string>
+    <string name="btn_register_here">यहां रजिस्टर करें</string>
+    <string name="btn_register">रजिस्टर</string>
+    <string name="permission_required">फ़ाइलें प्राप्त करने के लिए अनुमति आवश्यक है</string>
+    <string name="password_do_not_match">पासवर्ड मेल नहीं खाता</string>
+    <string name="setting_diag_title">अनुमति आवश्यक है!!</string>
+    <string name="setting_diag_msg">फ़ाइलें प्राप्त करने के लिए अनुमति आवश्यक है, सेटिंग में जाएं और अनुमति दें</string>
+    <string name="settings">सेटिंग</string>
+</resources>

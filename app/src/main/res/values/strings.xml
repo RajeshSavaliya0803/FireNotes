@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">FireNotes</string>
+    <string name="hint_password">Enter your password</string>
+    <string name="hint_email">Enter your Email</string>
+    <string name="hint_confirm_password">Confirm you password</string>
+    <string name="password_do_not_match">Password do not match</string>
+    <string name="add_note">Add Note</string>
+    <string name="log_out">Log out</string>
+    <string name="hint_content">Note Content</string>
+    <string name="hint_title">Note Title</string>
+    <string name="save_note">Save Note</string>
+    <string name="no_notes_found">No Notes Found</string>
+    <string name="add_image">Add Image</string>
+    <string name="delete_diag_title">Delete?</string>
+    <string name="delete_diag_msg">Do you want to delete?</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_register_here">Register here</string>
+    <string name="btn_register">Register</string>
+    <string name="permission_required">To access files READ permission is required</string>
+    <string name="setting_diag_title">Permission Required!!</string>
+    <string name="setting_diag_msg">To access files READ permission is required, go to setting and allow it</string>
+    <string name="settings">Settings</string>
+</resources>
