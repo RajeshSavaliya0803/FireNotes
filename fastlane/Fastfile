@@ -47,7 +47,7 @@ platform :android do
     gradle(task: "clean")
     gradle(task: "assemble", build_type: "Release")
     firebase_app_distribution(
-        service_credentials_file: ENV["FIREBASE_LOGIN_CREDENTIALS"]
+        service_credentials_file: ENV["FIREBASE_LOGIN_CREDENTIALS"],
         app: ENV['FIREBASE_APP_ID'],
         android_artifact_type: "APK",
         groups_file: "fastlane/groups.txt"
