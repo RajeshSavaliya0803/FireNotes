@@ -21,11 +21,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Step 3 Setup JDK
-      - name: Setup JDK
-        uses: actions/setup-java@v1
-        with:
-          java-version: 11
+#      # Step 3 Setup JDK
+#      - name: Setup JDK
+#        uses: actions/setup-java@v1
+#        with:
+#          java-version: 11
 
       # Step 4 Setup Ruby
       - name: Setup Ruby
@@ -33,19 +33,35 @@ jobs:
         with:
           ruby-version: '3.1'
 
+      # Grand permission
+      - name: Grant Permission to Execute
+          run: chmod +x gradlew
+
       # Step 5 Install the bundler & Fastlane (Create environment for ruby to avoid dependency hell and manage the dependencies versions)
       - name: Install bundler & Fastlane
         run: |
           gem install bundler
           bundle config path vendor/bundle
-          bundle install --jobs 4 --retry 3 
+          bundle install --jobs 4 --retry 3
+
+#      - name: Configure Keystore
+#        run: |
+#          echo "$ANDROID_KEYSTORE_FILE" > keystore.jks.b64
+#          base64 -d -i keystore.jks.b64 > app/keystore.jks
+#          echo "storeFile=keystore.jks" >> keystore.properties
+#          echo "keyAlias=$KEYSTORE_KEY_ALIAS" >> keystore.properties
+#          echo "storePassword=$KEYSTORE_STORE_PASSWORD" >> keystore.properties
+#          echo "keyPassword=$KEYSTORE_KEY_PASSWORD" >> keystore.properties
+#        env:
+#          ANDROID_KEYSTORE_FILE: ${{ secrets.ANDROID_KEYSTORE_FILE }}
+#          KEYSTORE_KEY_ALIAS: ${{ secrets.KEYSTORE_KEY_ALIAS }}
+#          KEYSTORE_KEY_PASSWORD: ${{ secrets.KEYSTORE_KEY_PASSWORD }}
+#          KEYSTORE_STORE_PASSWORD: ${{ secrets.KEYSTORE_STORE_PASSWORD }}
 
       - name: Create Firebase Service Credentials file
         run: |
           echo "$FIREBASE_CREDENTIALS" > firebase_credentials.json.b64
           base64 -d -i firebase_credentials.json.b64 > fastlane/firebase_credentials.json
-        env:
-          FIREBASE_LOGIN_CREDENTIALS : "fastlane/firebase_credentials.json"
 
       - name: Distribute app with 🔥 App Distribution 🚀
         run: bundle exec fastlane distribute
