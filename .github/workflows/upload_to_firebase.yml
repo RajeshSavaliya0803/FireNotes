@@ -44,6 +44,8 @@ jobs:
         run: |
           echo "$FIREBASE_CREDENTIALS" > firebase_credentials.json.b64
           base64 -d -i firebase_credentials.json.b64 > fastlane/firebase_credentials.json
+        env:
+          FIREBASE_LOGIN_CREDENTIALS : "fastlane/firebase_credentials.json"
 
       - name: Distribute app with 🔥 App Distribution 🚀
         run: bundle exec fastlane distribute
