@@ -35,7 +35,7 @@ jobs:
 
       # Grand permission
       - name: Grant Permission to Execute
-          run: chmod +x gradlew
+        run: chmod +x gradlew
 
       # Step 5 Install the bundler & Fastlane (Create environment for ruby to avoid dependency hell and manage the dependencies versions)
       - name: Install bundler & Fastlane
