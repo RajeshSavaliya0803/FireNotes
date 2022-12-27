@@ -37,6 +37,15 @@ platform :android do
     upload_to_play_store
   end
 
+  desc "Lane for updating versionCode"
+  lane :updateVersionCode do
+    latest_release = firebase_app_distribution_get_latest_release(
+      app: ENV["FIREBASE_APP_ID"],
+      service_credentials_file: "fastlane/firebase_credentials.json"
+    )
+    increment_version_code({ version_code: latest_release[:buildVersion].to_i + 1 })
+  end
+
   desc "Lane for distributing app using Firebase App Distributions"
   lane :distribute do
     gradle(task: "clean")
