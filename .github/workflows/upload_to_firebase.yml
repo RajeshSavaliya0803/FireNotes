@@ -71,6 +71,7 @@ jobs:
 
       - name: Update build version
         run: bundle exec fastlane updateVersionCode
+        
 
       - name: Distribute app with 🔥 App Distribution 🚀
         run: bundle exec fastlane distribute
